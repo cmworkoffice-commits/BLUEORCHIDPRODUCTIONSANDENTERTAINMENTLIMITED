@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blue Orchid Productions - Award-winning global film production, corporate events, and live entertainment company based in Hong Kong since 2012.">
+    <meta name="keywords" content="film production, corporate events, live entertainment, hong kong production, cinematic, video production, event management">
+    <title>Blue Orchid Productions | Global Cinematic Excellence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    
+    <style>
+        body { font-family: 'Montserrat', sans-serif; }
+        .heading { font-family: 'Playfair Display', serif; }
+        
+        .hero-bg { 
+            background: linear-gradient(rgba(5,7,13,0.78), rgba(5,7,13,0.95)), 
+                        url('https://images.unsplash.com/photo-1489599239927-9d6e7f9f8d3e') center/cover no-repeat fixed; 
+        }
+        .about-bg { 
+            background: linear-gradient(rgba(5,7,13,0.85), rgba(5,7,13,0.95)), 
+                        url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d') center/cover no-repeat fixed; 
+        }
+        .services-bg { 
+            background: linear-gradient(rgba(5,7,13,0.85), rgba(5,7,13,0.95)), 
+                        url('https://images.unsplash.com/photo-1517457373958-b7bdd4587205') center/cover no-repeat fixed; 
+        }
+        .portfolio-bg { 
+            background: linear-gradient(rgba(5,7,13,0.85), rgba(5,7,13,0.95)), 
+                        url('https://images.unsplash.com/photo-1492724441997-5dc865305da7') center/cover no-repeat fixed; 
+        }
+        .team-bg { 
+            background: linear-gradient(rgba(5,7,13,0.85), rgba(5,7,13,0.95)), 
+                        url('https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2') center/cover no-repeat fixed; 
+        }
+
+        .section { 
+            opacity: 0; 
+            transform: translateY(70px); 
+            transition: all 1.4s cubic-bezier(0.25, 0.1, 0.25, 1); 
+        }
+        .section.visible { 
+            opacity: 1; 
+            transform: translateY(0); 
+        }
+
+        .project-card { 
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1); 
+        }
+        .project-card:hover { 
+            transform: translateY(-15px) scale(1.03); 
+        }
+
+        .nav-link { 
+            position: relative; 
+        }
+        .nav-link:after {
+            content: ''; 
+            position: absolute; 
+            width: 0; 
+            height: 2px; 
+            bottom: -4px; 
+            left: 0; 
+            background-color: #a5b4fc; 
+            transition: width 0.4s ease;
+        }
+        .nav-link:hover:after, 
+        .nav-link.active:after { 
+            width: 100%; 
+        }
+    </style>
+</head>
+<body class="bg-[#05070d] text-white overflow-x-hidden">
+
+    <!-- NAV -->
+    <nav class="fixed top-0 w-full bg-black/95 backdrop-blur-2xl z-50 border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <span class="heading text-3xl font-bold tracking-widest">BLUE ORCHID</span>
+            </div>
+            <div class="hidden md:flex items-center gap-10 text-sm font-medium">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#process" class="nav-link">Process</a>
+                <a href="#portfolio" class="nav-link">Portfolio</a>
+                <a href="#team" class="nav-link">Team</a>
+                <a href="#testimonials" class="nav-link">Testimonials</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <button id="mobile-btn" class="md:hidden text-3xl"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="home" class="hero-bg h-screen flex items-center justify-center text-center relative">
+        <div class="max-w-6xl px-6 z-10">
+            <h1 class="heading text-6xl md:text-7xl lg:text-8xl font-bold leading-none tracking-tighter mb-8">
+                WE CRAFT<br>CINEMATIC WORLDS<br>THAT CAPTIVATE
+            </h1>
+            <p class="text-2xl text-gray-200 max-w-3xl mx-auto mb-12">
+                Blue Orchid Productions delivers world-class film production, spectacular corporate events, 
+                and unforgettable live entertainment experiences globally.
+            </p>
+            <a href="#portfolio" class="inline-block px-14 py-6 bg-violet-600 hover:bg-violet-700 rounded-full text-lg font-semibold transition-all">
+                Explore Our Work
+            </a>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section about-bg py-28 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="heading text-5xl font-bold mb-8">Our Story</h2>
+                    <p class="text-gray-300 text-lg leading-relaxed mb-6">
+                        Founded in 2012 in Hong Kong, Blue Orchid Productions has grown into a premier global production house. 
+                        We specialize in high-end film production, large-scale corporate events, and immersive live entertainment.
+                    </p>
+                    <p class="text-gray-300 text-lg leading-relaxed mb-8">
+                        With a passionate team of international talent, we have successfully delivered over 250 projects across 40 countries, 
+                        working with Fortune 500 companies, renowned artists, and visionary organizations.
+                    </p>
+                    <div class="grid grid-cols-3 gap-8">
+                        <div class="text-center">
+                            <h3 id="projects" class="text-5xl font-bold text-violet-400">250+</h3>
+                            <p class="text-sm text-gray-400">Projects Delivered</p>
+                        </div>
+                        <div class="text-center">
+                            <h3 id="countries" class="text-5xl font-bold text-violet-400">40+</h3>
+                            <p class="text-sm text-gray-400">Countries Reached</p>
+                        </div>
+                        <div class="text-center">
+                            <h3 id="clients" class="text-5xl font-bold text-violet-400">120+</h3>
+                            <p class="text-sm text-gray-400">Happy Clients</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" alt="Production" class="rounded-3xl w-full shadow-2xl" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="section services-bg py-28 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="heading text-5xl font-bold text-center mb-16">Our Services</h2>
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="project-card bg-zinc-900/80 border border-white/10 rounded-3xl p-10">
+                    <img src="https://images.unsplash.com/photo-1489599239927-9d6e7f9f8d3e" class="w-full h-64 object-cover rounded-2xl mb-8" loading="lazy">
+                    <h3 class="text-3xl font-semibold mb-4">Film Production</h3>
+                    <p class="text-gray-400">Full-cycle cinematic production including feature films, commercials, documentaries, music videos, web series, and complete post-production with VFX and color grading.</p>
+                </div>
+                <div class="project-card bg-zinc-900/80 border border-white/10 rounded-3xl p-10">
+                    <img src="https://images.unsplash.com/photo-1505238680356-667803448bb6" class="w-full h-64 object-cover rounded-2xl mb-8" loading="lazy">
+                    <h3 class="text-3xl font-semibold mb-4">Corporate Events</h3>
+                    <p class="text-gray-400">World-class corporate events, international conferences, product launches, award ceremonies, gala dinners, and hybrid virtual experiences.</p>
+                </div>
+                <div class="project-card bg-zinc-900/80 border border-white/10 rounded-3xl p-10">
+                    <img src="https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2" class="w-full h-64 object-cover rounded-2xl mb-8" loading="lazy">
+                    <h3 class="text-3xl font-semibold mb-4">Live Entertainment</h3>
+                    <p class="text-gray-400">Concerts, music festivals, theatrical performances, artist management, tours, and immersive brand activation experiences.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section id="process" class="section py-28 px-6 bg-black/70">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="heading text-5xl font-bold text-center mb-16">Our Production Process</h2>
+            <div class="grid md:grid-cols-4 gap-8 text-center">
+                <div class="p-8"><div class="text-6xl text-violet-400 mb-6">01</div><h4 class="font-semibold mb-3">Discovery & Strategy</h4><p class="text-gray-400">In-depth consultation to understand your vision, audience, and objectives.</p></div>
+                <div class="p-8"><div class="text-6xl text-violet-400 mb-6">02</div><h4 class="font-semibold mb-3">Pre-Production</h4><p class="text-gray-400">Scripting, budgeting, casting, location scouting, and detailed technical planning.</p></div>
+                <div class="p-8"><div class="text-6xl text-violet-400 mb-6">03</div><h4 class="font-semibold mb-3">Production</h4><p class="text-gray-400">Principal photography, live event execution with top-tier crew and equipment.</p></div>
+                <div class="p-8"><div class="text-6xl text-violet-400 mb-6">04</div><h4 class="font-semibold mb-3">Post-Production</h4><p class="text-gray-400">Editing, color grading, VFX, sound design, and multi-platform delivery.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio" class="section portfolio-bg py-28 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="heading text-5xl font-bold text-center mb-16">Featured Projects</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="project-card bg-zinc-900 rounded-3xl overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7" class="w-full h-80 object-cover" loading="lazy">
+                    <div class="p-8"><h4 class="font-semibold">"Shadows of Eternity"</h4><p class="text-violet-400 text-sm">Feature Film • Cannes Official Selection 2024</p></div>
+                </div>
+                <div class="project-card bg-zinc-900 rounded-3xl overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205" class="w-full h-80 object-cover" loading="lazy">
+                    <div class="p-8"><h4 class="font-semibold">Asia Tech Summit 2025</h4><p class="text-violet-400 text-sm">Corporate Event • Singapore</p></div>
+                </div>
+                <div class="project-card bg-zinc-900 rounded-3xl overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1501286353178-1f9e5a1c3d5b" class="w-full h-80 object-cover" loading="lazy">
+                    <div class="p-8"><h4 class="font-semibold">Midnight Aurora Festival</h4><p class="text-violet-400 text-sm">Live Music Festival • Bangkok</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEAM -->
+    <section id="team" class="section team-bg py-28 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="heading text-5xl font-bold text-center mb-16">Meet Our Creative Team</h2>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center bg-black/40 p-6 rounded-3xl">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d" class="w-48 h-48 mx-auto rounded-2xl mb-6" loading="lazy">
+                    <h4 class="font-semibold">Marcus Chen</h4>
+                    <p class="text-gray-400">Founder & Creative Director</p>
+                </div>
+                <div class="text-center bg-black/40 p-6 rounded-3xl">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330" class="w-48 h-48 mx-auto rounded-2xl mb-6" loading="lazy">
+                    <h4 class="font-semibold">Elena Rodriguez</h4>
+                    <p class="text-gray-400">Head of Film Production</p>
+                </div>
+                <div class="text-center bg-black/40 p-6 rounded-3xl">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e" class="w-48 h-48 mx-auto rounded-2xl mb-6" loading="lazy">
+                    <h4 class="font-semibold">David Kim</h4>
+                    <p class="text-gray-400">Event Production Director</p>
+                </div>
+                <div class="text-center bg-black/40 p-6 rounded-3xl">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80" class="w-48 h-48 mx-auto rounded-2xl mb-6" loading="lazy">
+                    <h4 class="font-semibold">Aisha Patel</h4>
+                    <p class="text-gray-400">Entertainment Manager</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="section py-28 px-6 bg-black/70">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="heading text-5xl font-bold text-center mb-16">Client Testimonials</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-zinc-900/50 p-8 rounded-3xl">"Blue Orchid transformed our brand vision into a cinematic masterpiece. Their attention to detail is unmatched."</div>
+                <div class="bg-zinc-900/50 p-8 rounded-3xl">"The most professional and creative team we've worked with. Our corporate gala was talked about for months."</div>
+                <div class="bg-zinc-900/50 p-8 rounded-3xl">"They brought our artist's vision to life with unmatched energy and precision. Truly world-class production."</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section py-28 px-6 bg-black/70">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="heading text-5xl font-bold text-center mb-16">Frequently Asked Questions</h2>
+            <div class="space-y-8">
+                <div><h4 class="font-semibold text-xl mb-3">What types of films do you produce?</h4><p class="text-gray-400">We produce feature films, documentaries, commercials, music videos, web series, and corporate films with full post-production support.</p></div>
+                <div><h4 class="font-semibold text-xl mb-3">Do you handle international events?</h4><p class="text-gray-400">Yes, we have successfully executed projects in over 40 countries with complete logistical and technical support.</p></div>
+                <div><h4 class="font-semibold text-xl mb-3">How long does a typical project take?</h4><p class="text-gray-400">Timelines vary: short commercials take 4-6 weeks, while feature films can take 6-18 months depending on scope.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section py-28 px-6 bg-black/80">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="heading text-5xl font-bold mb-8">Let's Create Something Extraordinary</h2>
+            <p class="text-gray-400 text-xl mb-12">Ready to bring your vision to life? Reach out to us today.</p>
+            <div class="space-y-4 text-gray-300">
+                <p>FLAT A, 8/F., KWUN TONG INDUSTRIAL CENTRE, PHASE-3</p>
+                <p>KOWLOON, HONG KONG</p>
+                <p class="pt-8 font-medium">info@blueorchidproductions.com</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black py-20 text-center border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6">
+            <p class="text-3xl heading mb-6">BLUE ORCHID PRODUCTIONS</p>
+            <p class="text-gray-400">© 2026 Blue Orchid Productions and Entertainment Limited. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu
+        document.getElementById('mobile-btn').addEventListener('click', () => {
+            alert("Navigation:\n\n• Home\n• About\n• Services\n• Process\n• Portfolio\n• Team\n• Testimonials\n• FAQ\n• Contact");
+        });
+
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // Active Navigation
+        window.addEventListener('scroll', () => {
+            let current = '';
+            document.querySelectorAll('section').forEach(section => {
+                if (scrollY >= section.offsetTop - 200) current = section.getAttribute('id');
+            });
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) link.classList.add('active');
+            });
+        });
+
+        // Scroll Reveal Animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.2 });
+        document.querySelectorAll('.section').forEach(section => observer.observe(section));
+
+        // Counter Animation
+        function animateCounter(id, target) {
+            let count = 0;
+            const el = document.getElementById(id);
+            const increment = Math.ceil(target / 60);
+            const timer = setInterval(() => {
+                count += increment;
+                if (count >= target) {
+                    el.textContent = target + "+";
+                    clearInterval(timer);
+                } else {
+                    el.textContent = count + "+";
+                }
+            }, 30);
+        }
+
+        const counterObserver = new IntersectionObserver(() => {
+            animateCounter('projects', 250);
+            animateCounter('countries', 40);
+            animateCounter('clients', 120);
+            counterObserver.disconnect();
+        });
+        counterObserver.observe(document.getElementById('about'));
+    </script>
+</body>
+</html>
