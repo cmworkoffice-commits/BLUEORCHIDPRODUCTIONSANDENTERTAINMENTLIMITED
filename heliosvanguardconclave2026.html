@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Helios Vanguard Conclave 2026</title>
+<meta name="description" content="Luxury international innovation summit focused on digital sovereignty, enterprise intelligence, autonomous systems, and strategic leadership.">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+font-family:'Manrope',sans-serif;
+background:#0b0f1a;
+color:#f5f5f5;
+overflow-x:hidden;
+}
+
+.hero{
+min-height:100vh;
+display:grid;
+grid-template-columns:1fr 1fr;
+align-items:center;
+padding:0 8%;
+background:#0b0f1a;
+}
+
+.hero-left h1{
+font-family:'Cinzel',serif;
+font-size:82px;
+line-height:1.05;
+margin-bottom:30px;
+color:#f8d9a0;
+}
+
+.hero-left p{
+font-size:20px;
+line-height:1.9;
+color:#c5ccd8;
+max-width:700px;
+margin-bottom:40px;
+}
+
+.hero-btn{
+display:inline-block;
+padding:16px 36px;
+background:#f8d9a0;
+color:#111;
+text-decoration:none;
+font-weight:700;
+letter-spacing:1px;
+border-radius:6px;
+transition:0.4s ease;
+}
+
+.hero-btn:hover{
+transform:translateY(-5px);
+}
+
+.hero-right{
+height:100vh;
+background:url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1800&auto=format&fit=crop') center/cover;
+clip-path:polygon(12% 0,100% 0,100% 100%,0 100%);
+}
+
+section{
+padding:120px 8%;
+}
+
+.alt{
+background:#111827;
+}
+
+h2{
+font-family:'Cinzel',serif;
+font-size:56px;
+margin-bottom:28px;
+color:#f8d9a0;
+}
+
+p{
+font-size:18px;
+line-height:1.95;
+color:#cdd3dd;
+}
+
+.split{
+display:grid;
+grid-template-columns:1.2fr 1fr;
+gap:60px;
+align-items:center;
+}
+
+.split img{
+width:100%;
+height:620px;
+object-fit:cover;
+border-radius:30px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:28px;
+margin-top:50px;
+}
+
+.card{
+background:#161f2e;
+padding:45px;
+border-top:4px solid #f8d9a0;
+transition:0.4s ease;
+}
+
+.card:hover{
+transform:translateY(-12px);
+background:#1d2940;
+}
+
+.card h3{
+font-family:'Cinzel',serif;
+font-size:28px;
+margin-bottom:18px;
+color:#fff;
+}
+
+.mosaic{
+display:grid;
+grid-template-columns:2fr 1fr 1fr;
+grid-template-rows:320px 320px;
+gap:20px;
+margin-top:50px;
+}
+
+.mosaic img{
+width:100%;
+height:100%;
+object-fit:cover;
+border-radius:20px;
+transition:0.5s ease;
+}
+
+.mosaic img:hover{
+transform:scale(1.02);
+}
+
+.mosaic img:first-child{
+grid-row:span 2;
+}
+
+.timeline{
+margin-top:50px;
+}
+
+.step{
+display:grid;
+grid-template-columns:120px 1fr;
+gap:30px;
+margin-bottom:35px;
+align-items:start;
+}
+
+.step-number{
+font-size:52px;
+font-family:'Cinzel',serif;
+color:#f8d9a0;
+}
+
+.step-content{
+background:#161f2e;
+padding:35px;
+border-radius:18px;
+}
+
+.step-content h3{
+font-size:28px;
+margin-bottom:15px;
+font-family:'Cinzel',serif;
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:24px;
+margin-top:50px;
+}
+
+.stat{
+text-align:center;
+padding:40px;
+background:#161f2e;
+}
+
+.stat h3{
+font-size:64px;
+color:#f8d9a0;
+font-family:'Cinzel',serif;
+margin-bottom:12px;
+}
+
+footer{
+padding:60px;
+text-align:center;
+background:#05070d;
+color:#9ca3af;
+}
+
+@keyframes float{
+0%{transform:translateY(0px);}
+50%{transform:translateY(-12px);}
+100%{transform:translateY(0px);}
+}
+
+.card{
+position:relative;
+overflow:hidden;
+}
+
+.card::before{
+content:'';
+position:absolute;
+width:180px;
+height:180px;
+background:rgba(248,217,160,0.06);
+border-radius:50%;
+top:-60px;
+right:-60px;
+transition:0.5s ease;
+}
+
+.card:hover::before{
+transform:scale(1.4);
+}
+
+.hero-left h1{
+animation:heroGlow 5s infinite alternate;
+}
+
+@keyframes heroGlow{
+from{text-shadow:0 0 10px rgba(248,217,160,0.2);}
+to{text-shadow:0 0 30px rgba(248,217,160,0.6);}
+}
+
+.mosaic img:hover{
+filter:brightness(1.1);
+}
+
+@media(max-width:900px){
+.hero{
+grid-template-columns:1fr;
+padding-top:80px;
+}
+
+.hero-right{
+height:500px;
+clip-path:none;
+margin-top:50px;
+}
+
+.hero-left h1{
+font-size:52px;
+}
+
+.split,.stats{
+grid-template-columns:1fr;
+}
+
+.mosaic{
+grid-template-columns:1fr;
+grid-template-rows:auto;
+}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+<div class="hero-left">
+<h1>THE HELIOS VANGUARD CONCLAVE 2026</h1>
+
+<p>
+An elite international summit dedicated to autonomous enterprise intelligence, digital sovereignty, transformational leadership, and strategic innovation for the next generation of global organizations.
+</p>
+
+<a href="#experience" class="hero-btn">Discover The Conclave</a>
+</div>
+
+<div class="hero-right"></div>
+</header>
+
+<section id="experience">
+<div class="split">
+
+<div>
+<h2>A New Era Of Executive Transformation</h2>
+
+<p>
+The Helios Vanguard Conclave 2026 is envisioned as a refined leadership environment bringing together enterprise visionaries, global strategists, innovation architects, and transformational decision-makers.
+</p>
+
+<p style="margin-top:20px;">
+Located within the Aurelius Crown Pavilion in Hong Kong, the summit merges intelligent enterprise dialogue with luxury hospitality, immersive environments, private networking experiences, and high-level strategic collaboration.
+</p>
+
+<div class="stats">
+<div class="stat">
+<h3>120</h3>
+<p>Delegates</p>
+</div>
+
+<div class="stat">
+<h3>04</h3>
+<p>Days</p>
+</div>
+
+<div class="stat">
+<h3>25+</h3>
+<p>Sessions</p>
+</div>
+
+<div class="stat">
+<h3>18</h3>
+<p>Partners</p>
+</div>
+</div>
+</div>
+
+<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1800&auto=format&fit=crop" alt="Executive innovation summit">
+
+</div>
+</section>
+
+<section class="alt">
+<h2>Strategic Experience Environments</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>The Sovereignty Forum</h3>
+<p>
+Executive discussions exploring secure digital ecosystems, enterprise resilience, intelligent governance, and future-ready operational frameworks.
+</p>
+</div>
+
+<div class="card">
+<h3>Autonomous Systems Pavilion</h3>
+<p>
+Immersive innovation showcases presenting predictive enterprise intelligence, AI infrastructure, intelligent automation, and connected ecosystems.
+</p>
+</div>
+
+<div class="card">
+<h3>Vanguard Leadership Lounge</h3>
+<p>
+Private hospitality spaces designed for strategic networking, investor engagement, executive collaboration, and luxury guest experiences.
+</p>
+</div>
+
+</div>
+</section>
+
+<section>
+<h2>Inside The Helios Experience</h2>
+
+<p style="max-width:1100px;margin-bottom:40px;">
+The Helios Vanguard Conclave introduces a multi-sensory executive environment blending intelligent innovation showcases, immersive stage fabrication, architectural lighting systems, augmented-reality experiences, holographic presentations, luxury dining environments, skyline networking lounges, and high-production entertainment programming.
+</p>
+
+<div class="mosaic">
+<img src="https://images.pexels.com/photos/2774556/pexels-photo-2774556.jpeg?auto=compress&cs=tinysrgb&w=1800" alt="Luxury conference venue">
+
+<img src="https://images.pexels.com/photos/1181396/pexels-photo-1181396.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Executive meeting lounge">
+
+<img src="https://images.pexels.com/photos/976866/pexels-photo-976866.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Luxury networking reception">
+
+<img src="https://images.pexels.com/photos/2608517/pexels-photo-2608517.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Corporate summit stage fabrication">
+
+<img src="https://images.pexels.com/photos/2774570/pexels-photo-2774570.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Immersive innovation conference hall">
+</div>
+
+<div class="cards" style="margin-top:70px;">
+
+<div class="card">
+<h3>Immersive Hologram Theatre</h3>
+<p>
+A cinematic executive showcase integrating holographic storytelling, intelligent projection environments, synchronized LED architecture, and immersive future-enterprise presentations.
+</p>
+</div>
+
+<div class="card">
+<h3>AR & VR Innovation Gallery</h3>
+<p>
+Interactive enterprise simulations allowing delegates to experience autonomous business ecosystems, predictive intelligence systems, virtual infrastructure planning, and immersive transformation environments.
+</p>
+</div>
+
+<div class="card">
+<h3>Luxury Executive Dining Salons</h3>
+<p>
+Private culinary experiences curated for senior leadership delegates featuring skyline dining, premium hospitality service, executive wine lounges, and invitation-only networking receptions.
+</p>
+</div>
+
+<div class="card">
+<h3>Architectural Stage Fabrication</h3>
+<p>
+Large-scale stage environments designed with cinematic lighting systems, kinetic visual structures, intelligent LED environments, digital ceiling arrays, and futuristic experiential production design.
+</p>
+</div>
+
+</div>
+</section>
+
+<section class="alt">
+<h2>The Four-Day Leadership Journey</h2>
+
+<div class="timeline">
+
+<div class="step">
+<div class="step-number">01</div>
+<div class="step-content">
+<h3>Opening Intelligence Summit</h3>
+<p>
+Strategic keynote experiences introducing autonomous enterprise transformation, predictive systems, and intelligent global operations.
+</p>
+</div>
+</div>
+
+<div class="step">
+<div class="step-number">02</div>
+<div class="step-content">
+<h3>Digital Sovereignty Dialogues</h3>
+<p>
+Closed-door executive forums focused on cybersecurity resilience, governance intelligence, digital independence, and enterprise protection strategies.
+</p>
+</div>
+</div>
+
+<div class="step">
+<div class="step-number">03</div>
+<div class="step-content">
+<h3>Future Leadership Exchange</h3>
+<p>
+Strategic workshops exploring organizational agility, transformation leadership, intelligent workforce ecosystems, and future market adaptation.
+</p>
+</div>
+</div>
+
+<div class="step">
+<div class="step-number">04</div>
+<div class="step-content">
+<h3>The Helios Grand Finale</h3>
+<p>
+Luxury entertainment experiences featuring orchestral performances, immersive visual showcases, executive gala dining, and skyline networking receptions.
+</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="split">
+<img src="https://images.pexels.com/photos/1190297/pexels-photo-1190297.jpeg?auto=compress&cs=tinysrgb&w=1800" alt="Luxury live music and entertainment">
+
+<div>
+<h2>Luxury Hospitality & Night Experiences</h2>
+
+<p>
+As evening transforms the summit atmosphere, the Helios Vanguard Conclave evolves into a luxury executive social experience featuring rooftop after-parties, live orchestral-electronic music performances, skyline hospitality lounges, artistic visual installations, and premium entertainment environments.
+</p>
+
+<p style="margin-top:20px;">
+Delegates experience curated nightlife programming with immersive audio systems, luxury lounge architecture, ambient lighting design, celebrity performances, private networking salons, and high-end hospitality experiences designed for international business leaders and strategic partners.
+</p>
+
+<div class="cards" style="margin-top:35px;grid-template-columns:repeat(2,1fr);">
+<div class="card">
+<h3>Skyline After Parties</h3>
+<p>
+Exclusive rooftop gatherings with cinematic lighting installations, luxury hospitality bars, international DJs, and curated executive networking environments.
+</p>
+</div>
+
+<div class="card">
+<h3>Live Performance Experiences</h3>
+<p>
+Hybrid orchestral-electronic showcases, immersive digital visuals, synchronized stage effects, and high-production live entertainment sequences.
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="gallery" style="margin-top:60px;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px;">
+<img style="height:320px;width:100%;object-fit:cover;border-radius:22px;animation:float 6s ease-in-out infinite;" src="https://images.pexels.com/photos/167636/pexels-photo-167636.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Live music performance stage">
+
+<img style="height:320px;width:100%;object-fit:cover;border-radius:22px;animation:float 7s ease-in-out infinite;" src="https://images.pexels.com/photos/587741/pexels-photo-587741.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Luxury gala networking dinner">
+
+<img style="height:320px;width:100%;object-fit:cover;border-radius:22px;animation:float 8s ease-in-out infinite;" src="https://images.pexels.com/photos/2747449/pexels-photo-2747449.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Executive nightlife celebration">
+</div>
+</section>
+
+<footer>
+<p>
+© 2026 Blue Orchid Productions & Entertainment Limited — The Helios Vanguard Conclave 2026
+</p>
+</footer>
+
+</body>
+</html>
